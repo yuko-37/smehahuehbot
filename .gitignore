@@ -1,3 +1,4 @@
-for_test.py
+*_test.py
 test.txt
 tempCodeRunnerFile.py
+*.pyc
