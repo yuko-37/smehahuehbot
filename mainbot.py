@@ -1,5 +1,6 @@
 import telebot as tlb
 from telebot import types
+from config import BOT_TOKEN
 from pathlib import Path
 from random import choice
 
@@ -8,7 +9,7 @@ import admin as a
 import getdata as gt
 import jokes as j
 
-bot = tlb.TeleBot('Token')
+bot = tlb.TeleBot(BOT_TOKEN)
 
 
 @bot.message_handler(commands=['admin', 'админ'])

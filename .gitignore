@@ -3,3 +3,4 @@ test.txt
 tempCodeRunnerFile.py
 *.pyc
 __pycache__
+config.py
