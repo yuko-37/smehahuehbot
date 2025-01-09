@@ -8,7 +8,7 @@ import admin as a
 import getdata as gt
 import jokes as j
 
-bot = tlb.TeleBot('7789037765:AAFzNMCVoyG6Of0MBtOPZ4p50hmybM7QUMA')
+bot = tlb.TeleBot('Token')
 
 
 @bot.message_handler(commands=['admin', 'админ'])
