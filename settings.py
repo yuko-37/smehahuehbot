@@ -2,7 +2,8 @@ from pathlib import Path
 from random import sample, randint
 
 MIN_USERS = 2
-MAX_USERS = 3
+MAX_USERS = 8
+MAX_CONNECT_ITER = 100
 
 game_is_active = False
 game_code = None
@@ -55,11 +56,7 @@ def start_game(num_of_users):
     path = Path('smehahuehbot/text/joke-subjects.txt')
     content = path.read_text()
     subject_joke_patterns = content.splitlines()
-
-    # if len(subject_joke_patterns) < 2 * num_users:
-    #     error_msg = f'''Not enought subject joke patters. 
-    #         Expected at least: {2*num_users}, found: {len(subject_joke_patterns)}'''
-    #     raise Exception(error_msg)
+    print(f'\n---------[START] игра {game_code} началась\n')
 
 
 def finish_game(bot):
@@ -71,6 +68,7 @@ def finish_game(bot):
     global subject_joke_patterns
     global users
     
+    log = f'\n---------[END] игра {game_code} завершена\n'
     game_is_active = False
     game_code = None
     admin = None
@@ -78,8 +76,10 @@ def finish_game(bot):
     subjects = set()
     subject_joke_patterns = list()
 
-    for userdata in users.values():
-        bot.send_message(userdata['chat_id'], 'Конец игры.')
+    for username, userdata in users.items():
+        text = f'Конец игры. {username}, спасибо за участие!'
+        bot.send_message(userdata['chat_id'], text)
     
+    print(log)
     users = dict()
 

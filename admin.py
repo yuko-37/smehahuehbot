@@ -34,16 +34,4 @@ def process_num_user(message, bot):
         sent_msg = bot.reply_to(message, text)
         bot.register_next_step_handler(sent_msg, process_num_user, bot=bot)
 
-
-def finish_game(bot):
-    s.game_is_active = False
-    s.game_code = None
-    s.admin = None
-    s.num_users = 0
-    s.subjects = {''}
-
-    for userdata in s.users.values():
-        bot.send_message(userdata['chat_id'], 'Конец игры.')
-    
-    s.users = {}
     

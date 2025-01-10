@@ -74,8 +74,8 @@ def process_voting_results(bot):
             res[vote] = 0
         res[vote] += 1
 
-    text = 'Резульаты: \n\n'
-    sorted_res = sorted(res.items(), key=lambda item: item[1])
+    text = 'Результаты: \n\n'
+    sorted_res = sorted(res.items(), key=lambda item: item[1], reverse=True)
     for user, score in sorted_res:
         info = f'{user} - {score}\n'
         info += s.users[user]['s_joke'] + '\n\n'

@@ -19,8 +19,7 @@ def admin_command_handler(message):
 
 @bot.message_handler(commands=['end'])
 def end_command_handler(message):
-    a.finish_game(bot)
-    print('Game is finished.')
+    s.finish_game(bot)
 
 
 @bot.message_handler(content_types=['text'])
