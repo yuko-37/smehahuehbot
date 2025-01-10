@@ -7,32 +7,43 @@ def process_admin(message, bot):
 
     if s.admin is None:
         s.admin = message.from_user.username
-    
+
     if username == s.admin:
-        text = 'Введите количество игроков (от 2-8): '
+        text = f'Введите количество игроков (от {s.MIN_USERS}-{s.MAX_USERS}): '
         sent_msg = bot.send_message(message.chat.id, text)
         bot.register_next_step_handler(sent_msg, process_num_user, bot=bot)
     else:
-        bot.send_message(message.chat.id, 'Админ уже есть.')
+        bot.send_message(message.chat.id, 'Игра в процессе, админ уже назначен.')
 
 
 def process_num_user(message, bot):
     num_text = message.text
-    print('here ' + num_text)
     try:
         num_users = int(num_text)
-        if (num_users < 2 or num_users > 8):
+        if (num_users < s.MIN_USERS or num_users > s.MAX_USERS):
             num_users = None
             raise Exception
-        s.num_users = num_users
-        s.game_code = f'/{random.randint(1000, 10000)}'
+
+        s.start_game(num_users)
         text = f'Получите код игры {s.game_code}'
         bot.send_message(message.chat.id, text)
 
     except Exception as e:
         print(e)
-        text = 'Ошибка ввода. Пожалуйста введите целое число от 2 до 8: '
+        text = f'Ошибка ввода. Пожалуйста введите целое число от {s.MIN_USERS} до {s.MAX_USERS}: '
         sent_msg = bot.reply_to(message, text)
         bot.register_next_step_handler(sent_msg, process_num_user, bot=bot)
 
-    print(s.num_users)
+
+def finish_game(bot):
+    s.game_is_active = False
+    s.game_code = None
+    s.admin = None
+    s.num_users = 0
+    s.subjects = {''}
+
+    for userdata in s.users.values():
+        bot.send_message(userdata['chat_id'], 'Конец игры.')
+    
+    s.users = {}
+    
