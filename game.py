@@ -22,27 +22,40 @@ def start(message):
     print(f'\n---------[START] игра {s.game_code} началась\n')
 
 
-def finish(bot, message=None):
-    if message is not None:
-        username = message.from_user.username
-        print(f'отправлен запрос на окончание игры {s.game_code} [{username}]')
-        if s.game_code is not None:
-            if username not in s.users:
-                bot.send_message(message.chat.id, f'{username}, игра {s.game_code} прервана по вашему запросу')
-            if s.admin_chat_id is not None and username != s.admin and s.admin not in s.users:
-                bot.send_message(s.admin_chat_id, f'{username}, игра {s.game_code} прервана по запросу {username}')
-        else:
-            bot.send_message(message.chat.id, f'{username}, нет активной игры для завершения.')
+def finish(bot, message=None, success=False):
+    code = s.game_code
+    items = s.users
+    reset()
 
-    for username, userdata in s.users.items():
-        text = f'Конец игры. {username}, спасибо за участие!'
-        bot.send_message(userdata['chat_id'], text)
+    if success:
+        for name, data in items.items():
+            text = f'Конец игры. {name}, спасибо за участие!'
+            bot.send_message(data['chat_id'], text)
 
-    if s.game_code is not None:
-        print(f'\n---------[END] игра {s.game_code} завершена\n')
     else:
-        print(f'сброс данных')
+        if message is not None:
+            username = message.from_user.username
+            print(f'отправлен запрос на окончание игры {code} [{username}]')
+            text = f'игра {code} прервана по запросу {username}'
+        else:
+            print(f'игра {code} прервана из-за таймаута')
+            text = f'игра {code} прервана из-за таймаута'
 
+        for name, data in items.items():
+            bot.send_message(data['chat_id'], text)
+
+    print(f'\n---------[END] игра {code} завершена\n')
+
+
+def is_active(): 
+    res = s.game_is_active
+    res = res and s.game_code is not None
+    res = res and s.admin is not None
+    res = res and s.admin_chat_id is not None
+    return res
+
+
+def reset():
     s.game_is_active = False
     s.game_code = None
     s.admin = None
@@ -51,10 +64,3 @@ def finish(bot, message=None):
     s.subjects = set()
     s.users = dict()
     s.sj_patterns = list()
-
-
-def is_active(): 
-    res = s.game_is_active
-    res = res and s.game_code is not None
-    res = res and s.admin is not None
-    return res

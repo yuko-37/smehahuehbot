@@ -13,6 +13,10 @@ def ask_users_for_subjects(bot):
 
 
 def process_subjects(message, bot):
+    if message.text == '/end':
+        game.finish(bot, message)
+        return
+
     username = message.from_user.username
     user_subject_set = extract_wordset(message)
     s.users[username]['user_subject_set'] = user_subject_set

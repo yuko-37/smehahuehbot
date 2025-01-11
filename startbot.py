@@ -30,7 +30,15 @@ def admin_command_handler(message):
 
 @bot.message_handler(commands=['end'])
 def end_command_handler(message):
-    game.finish(bot, message)
+    if game.is_active():
+        username = message.from_user.username
+        if username == s.admin or username in s.users:
+            game.finish(bot, message)
+        else:
+            bot.send_message(message.chat.id, 'Вы не можете прервать текущую игру, вы не являетесь участником.')
+    else:
+        game.reset()
+        print('cброс настроек')
 
 
 @bot.message_handler(content_types=['text'])
@@ -48,7 +56,7 @@ def start_game_handler(message):
                 bot.send_message(message.chat.id, 'Нет свободных мест. Подождите окончания текущей игры.')
 
     else:
-        bot.send_message(message.chat.id, f'Для начала игры, введите {s.ADMIN}.')
+        bot.send_message(message.chat.id, f'Для начала игры, введите /admin.')
 
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith('pattern_'))

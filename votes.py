@@ -73,7 +73,7 @@ def process_voting_results(bot):
     for userdata in s.users.values():
         bot.send_message(userdata['chat_id'], text)
     
-    game.finish(bot)
+    game.finish(bot, success=True)
 
 
 def get_vote_str(num):
