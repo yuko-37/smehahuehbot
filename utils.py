@@ -10,5 +10,5 @@ def notify_all_except(text, me, bot):
             return
 
 
-def game_code_as_num():
-    return s.game_code[1:] if s.game_code is not None else None
+def formatted_code():
+    return f'*{s.game_code[1:]}*' if s.game_code is not None else None

@@ -2,6 +2,7 @@ from random import randint
 from pathlib import Path
 
 import settings as s
+import utils as u
 
 
 def start(message):
@@ -24,6 +25,7 @@ def start(message):
 
 def finish(bot, message=None, success=False):
     code = s.game_code
+    formatted_code = u.formatted_code()
     items = s.users
     reset()
 
@@ -33,16 +35,17 @@ def finish(bot, message=None, success=False):
             bot.send_message(data['chat_id'], text)
 
     else:
+        text = ''
         if message is not None:
             username = message.from_user.username
             print(f'отправлен запрос на окончание игры {code} [{username}]')
-            text = f'игра {code} прервана по запросу {username}'
+            text = f'игра {formatted_code} прервана по запросу *{username}*'
         else:
             print(f'игра {code} прервана из-за таймаута')
-            text = f'игра {code} прервана из-за таймаута'
+            text = f'игра {formatted_code} прервана из-за таймаута'
 
         for name, data in items.items():
-            bot.send_message(data['chat_id'], text)
+            bot.send_message(data['chat_id'], text, parse_mode='Markdown')
 
     print(f'\n---------[END] игра {code} завершена\n')
 

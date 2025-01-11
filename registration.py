@@ -18,7 +18,7 @@ def process_user(message, bot):
         register_user(username, int(message.chat.id))
 
         if username == s.admin:
-            bot.send_message(message.chat.id, f'Вы назначены администратором игры *{u.game_code_as_num()}*.',
+            bot.send_message(message.chat.id, f'Вы назначены администратором игры {u.formatted_code()}.',
                              parse_mode='Markdown')
         else:
             bot.send_message(message.chat.id, f'*{username}*, добро пожаловать на борт Смехокорабля!', parse_mode='Markdown')

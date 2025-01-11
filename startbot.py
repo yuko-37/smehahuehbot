@@ -21,7 +21,7 @@ def admin_command_handler(message):
         print(f'назначение админа [{s.admin}]')
         r.process_user(message, bot)
     elif username == s.admin:
-        bot.send_message(message.chat.id, f'Вы назначены администратором игры *{u.game_code_as_num()}*.',
+        bot.send_message(message.chat.id, f'Вы назначены администратором игры {u.formatted_code()}.',
                              parse_mode='Markdown')
     else:
         bot.send_message(message.chat.id, f'Админ *{s.admin}* уже назначен. Получите код игры {s.game_code}', 
