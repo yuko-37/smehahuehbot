@@ -62,6 +62,6 @@ def waiting_jokes(bot):
             return
         time.sleep(3)
         finished = {u for u in s.users if 's_joke' in s.users[u]}
-        log = f'''шутки #{iter}: [{len(finished)}\{s.num_users}]{'' if (len(finished) == s.num_users) else ' ждём ' + str(s.users.keys()-finished) + '...'}'''
+        log = f'''шутки #{iter}: [{len(finished)}\\{s.num_users}]{'' if (len(finished) == s.num_users) else ' ждём ' + str(s.users.keys()-finished) + '...'}'''
         print(log)
 
