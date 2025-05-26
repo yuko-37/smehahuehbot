@@ -20,6 +20,11 @@ def start(message):
     path = Path(s.SJ_PATTERNS_PATH)
     content = path.read_text()
     s.sj_patterns = content.splitlines()
+
+    animal_path = Path(s.SJ_ANIMAL_PATTERNS_PATH)
+    content = animal_path.read_text()
+    s.sj_animal_patterns = content.splitlines()
+
     print(f'\n---------[START] игра {s.game_code} началась\n')
 
 

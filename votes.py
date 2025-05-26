@@ -9,21 +9,23 @@ def ask_users_for_joke_voting(bot):
     for username, userdata in s.users.items():
         chat_id = userdata['chat_id']
         s_jokes = {u:s.users[u]['s_joke'] for u in s.users if u != username}
+        s_animal_jokes = {u:s.users[u]['s_animal_joke'] for u in s.users if u != username}
+        s_all_jokes = list(s_jokes.items()) + list(s_animal_jokes.items())
 
         markup = InlineKeyboardMarkup()
         text = f'Проголосуйте за понравившуюся шутку: \n\n'
         buttons = list()
 
         ind = 1
-        for user, joke in s_jokes.items():
+        for user, joke in s_all_jokes:
             text += f'\t{ind}. {joke}\n\n'
             button = InlineKeyboardButton(f'Шутка {ind}', callback_data=f'vote_{user}')
             buttons.append(button)
 
             if ind % 2 == 0:
-                markup.row(buttons[0], buttons[1])
+                markup.row(buttons[ind-2], buttons[ind-1])
                 buttons = list()
-            elif ind == len(s_jokes):
+            elif ind == len(s_all_jokes):
                 markup.add(button)
 
             ind += 1

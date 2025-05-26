@@ -35,6 +35,8 @@ def register_user(username, chat_id):
     s.users[username]['chat_id'] = int(chat_id)
     sj_patterns = sample(s.sj_patterns, 2)
     s.users[username]['user_sj_patterns'] = sj_patterns
+    sj_animal_patterns = sample(s.sj_animal_patterns, 2)
+    s.users[username]['user_sj_animal_patterns'] = sj_animal_patterns
 
     print(f'регистрация пользователя [{username}]')
 

@@ -66,6 +66,13 @@ def callback_handler(call):
         j.ask_user_to_finish_joke(call, bot)
 
 
+@bot.callback_query_handler(func=lambda call: call.data.startswith('animal_pattern_'))
+def callback_handler(call):
+    bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
+    if game.is_active():
+        j.ask_user_to_finish_animal_joke(call, bot)
+
+
 @bot.callback_query_handler(func=lambda call: call.data.startswith('vote_'))
 def callback_handler(call):
     bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)
