@@ -39,12 +39,19 @@ def register_user(username, chat_id):
     print(f'регистрация пользователя [{username}]')
 
 
+def register_ai_user(ainame):
+    s.ai_users[ainame] = dict()
+    s.ai_users[ainame]['ai_sj_pattern'] = sample(s.sj_patterns, 1)[0]
+
+    print(f'регистрация ИИ [{ainame}]')
+
 def waiting_users(message, bot):
     if game.is_active():
 
         if message.text == s.NO:
             s.num_users = len(s.users)
-            text = f'В игре участвуют {len(s.users)}: {", ".join(s.users.keys())}'
+            ai_and_users = list(s.users.keys()) + list(s.ai_users.keys())
+            text = f'В игре участвуют {len(ai_and_users)}: {", ".join(ai_and_users)}'
 
             if s.admin_chat_id is not None:
                 bot.send_message(s.admin_chat_id, text)
@@ -71,10 +78,9 @@ def waiting_users(message, bot):
             time.sleep(3)
             print(f'подключение #{iter}: [{len(s.users)}\{s.MIN_USERS}] {list(s.users.keys())}...')
 
-        # text = f'Сейчас игроков {len(s.users)}: {", ".join(s.users.keys())}.\n\nПодождать ещё? {s.YES} {s.NO}'
-
-        users_str = '\n'.join(s.users.keys())
-        text = f'Сейчас игроков {len(s.users)}: \n{users_str}\n\nПодождать ещё? {s.YES} {s.NO}'
+        ai_and_users = list(s.users.keys()) + list(s.ai_users.keys())
+        users_str = '\n'.join(ai_and_users)
+        text = f'Сейчас игроков {len(ai_and_users)}: \n{users_str}\n\nПодождать ещё? {s.YES} {s.NO}'
         
         if s.admin_chat_id is not None:
             sent_msg = bot.send_message(s.admin_chat_id, text)

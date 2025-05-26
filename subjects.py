@@ -25,6 +25,7 @@ def process_subjects(message, bot):
     bot.send_message(message.chat.id, 'Ждём других игроков...')
 
     if username == s.admin:
+        request_ai_subjects()
         waiting_subjects(bot)
         j.ask_users_for_sj_pattern(bot)
 
@@ -48,3 +49,9 @@ def waiting_subjects(bot):
         finished = {u for u in s.users if 'user_subject_set' in s.users[u]}
         log = f'''предметы #{iter}: [{len(finished)}\{s.num_users}]{'' if (len(finished) == s.num_users) else ' ждём ' + str(s.users.keys()-finished) + '...'}'''
         print(log)
+
+
+def request_ai_subjects():
+    for ai in s.ai_users:
+        s.ai_users[ai]['ai_subject_set'] = {'ai_subject1', 'ai_subject2', 'ai_subject3'}
+        s.subjects |= s.ai_users[ai]['ai_subject_set']

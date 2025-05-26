@@ -47,6 +47,7 @@ def process_joke_creation(message, bot):
     bot.send_message(message.chat.id, 'Ждём других игроков...')
 
     if username == s.admin:
+        request_ai_jokes()
         waiting_jokes(bot)
         v.ask_users_for_joke_voting(bot)
 
@@ -65,3 +66,19 @@ def waiting_jokes(bot):
         log = f'''шутки #{iter}: [{len(finished)}\\{s.num_users}]{'' if (len(finished) == s.num_users) else ' ждём ' + str(s.users.keys()-finished) + '...'}'''
         print(log)
 
+
+def request_ai_jokes():
+
+    for ai in s.ai_users:
+        ai_subjects = s.ai_users[ai]['ai_subject_set']
+        subject = choice(list(s.subjects - ai_subjects))
+        sj_pattern = s.ai_users[ai]['ai_sj_pattern']
+
+        if sj_pattern.startswith('[]'):
+            subject = subject.capitalize()
+
+        sj_chosen = sj_pattern.replace('[]', subject)
+        s.ai_users[ai]['ai_sj_chosen'] = sj_chosen
+        ai_generated_joke = 'AI GENERATED JOKE'
+        s_joke = sj_chosen.replace('...', f' {ai_generated_joke}.')
+        s.ai_users[ai]['ai_s_joke'] = s_joke

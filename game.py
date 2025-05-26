@@ -66,4 +66,5 @@ def reset():
     s.num_users = None
     s.subjects = set()
     s.users = dict()
+    s.ai_users = dict()
     s.sj_patterns = list()

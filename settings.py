@@ -1,4 +1,4 @@
-MIN_USERS = 2
+MIN_USERS = 1
 MAX_USERS = 8
 MAX_CONNECT_ITER = 100
 MAX_WAIT_ITER = 100
@@ -14,6 +14,7 @@ admin_chat_id = None
 num_users = None
 subjects = set()
 users = dict()
+ai_users = dict()
 sj_patterns = list()
 
 

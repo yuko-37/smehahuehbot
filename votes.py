@@ -8,22 +8,24 @@ import settings as s
 def ask_users_for_joke_voting(bot):
     for username, userdata in s.users.items():
         chat_id = userdata['chat_id']
-        s_jokes = {u:s.users[u]['s_joke'] for u in s.users if u != username}
+        s_jokes = {u: s.users[u]['s_joke'] for u in s.users if u != username}
+        ai_jokes = {ai: s.ai_users[ai]['ai_s_joke'] for ai in s.ai_users}
+        all_jokes = list(s_jokes.items()) + list(ai_jokes.items())
 
         markup = InlineKeyboardMarkup()
         text = f'Проголосуйте за понравившуюся шутку: \n\n'
         buttons = list()
 
         ind = 1
-        for user, joke in s_jokes.items():
+        for user, joke in all_jokes:
             text += f'\t{ind}. {joke}\n\n'
             button = InlineKeyboardButton(f'Шутка {ind}', callback_data=f'vote_{user}')
             buttons.append(button)
 
             if ind % 2 == 0:
-                markup.row(buttons[0], buttons[1])
+                markup.row(buttons[ind-2], buttons[ind-1])
                 buttons = list()
-            elif ind == len(s_jokes):
+            elif ind == len(all_jokes):
                 markup.add(button)
 
             ind += 1
@@ -55,6 +57,7 @@ def waiting_votes(bot):
         log = f'''голосование #{iter}: [{len(finished)}\{s.num_users}]{'' if (len(finished) == s.num_users) else ' ждём ' + str(s.users.keys()-finished) + '...'}'''
         print(log)
 
+
 def process_voting_results(bot):
     res = dict()
     votes = [s.users[u]['sj_vote'] for u in s.users]
@@ -67,7 +70,10 @@ def process_voting_results(bot):
     sorted_res = sorted(res.items(), key=lambda item: item[1], reverse=True)
     for user, score in sorted_res:
         info = f'{user} - {score} {get_vote_str(score)}\n'
-        info += s.users[user]['s_joke'] + '\n\n'
+        if user in s.users:
+            info += s.users[user]['s_joke'] + '\n\n'
+        else:
+            info += s.ai_users[user]['ai_s_joke'] + '\n\n'
         text += info
     
     for userdata in s.users.values():
