@@ -138,41 +138,35 @@
         <mxCell id="umijd8wkXjmUjJrFssDF-50" value="yes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry x="-100" y="250" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-54" target="umijd8wkXjmUjJrFssDF-71" edge="1">
+        <mxCell id="OrnsrFl1eFmkXh2mt2Ma-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="umijd8wkXjmUjJrFssDF-54" target="umijd8wkXjmUjJrFssDF-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-54" value="admin:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;load_ai_items(...)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
+        <mxCell id="umijd8wkXjmUjJrFssDF-54" value="admin: start_collecting_data(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="360" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-55" target="umijd8wkXjmUjJrFssDF-57" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-55" value="ask_player_for_items(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="460" width="240" height="20" as="geometry" />
+        <mxCell id="umijd8wkXjmUjJrFssDF-55" value="admin: ask_players_for_items(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
+          <mxGeometry y="410" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-57" target="umijd8wkXjmUjJrFssDF-74" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-57" value="process_items(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="510" width="240" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-71" target="umijd8wkXjmUjJrFssDF-55" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-71" value="admin:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;load_ai_animals(...)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="410" width="240" height="20" as="geometry" />
+          <mxGeometry y="460" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-74" target="umijd8wkXjmUjJrFssDF-76" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-74" value="ask_player_for_animals(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="560" width="240" height="20" as="geometry" />
+          <mxGeometry y="510" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-76" target="umijd8wkXjmUjJrFssDF-79" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-76" value="process_animals(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="610" width="240" height="20" as="geometry" />
+          <mxGeometry y="560" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-79" target="umijd8wkXjmUjJrFssDF-82" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -180,31 +174,31 @@
         <mxCell id="umijd8wkXjmUjJrFssDF-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-79" target="umijd8wkXjmUjJrFssDF-81" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-79" value="admin:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;waiting_players_data(...)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;player[&#39;animals&#39;] &amp;lt; num_players ?&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry y="660" width="240" height="40" as="geometry" />
+        <mxCell id="umijd8wkXjmUjJrFssDF-79" value="admin:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;waiting_for_players_data(...)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;player[&#39;animals&#39;] &amp;lt; num_players ?&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="610" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-81" target="umijd8wkXjmUjJrFssDF-88" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-81" value="no" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="100" y="730" width="40" height="20" as="geometry" />
+          <mxGeometry x="100" y="680" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.368;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="umijd8wkXjmUjJrFssDF-82" target="umijd8wkXjmUjJrFssDF-79" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="80" y="660" as="targetPoint" />
+            <mxPoint x="80" y="610" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-80" y="640" />
-              <mxPoint x="88" y="640" />
+              <mxPoint x="-80" y="590" />
+              <mxPoint x="88" y="590" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-82" value="yes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry x="-100" y="670" width="40" height="20" as="geometry" />
+          <mxGeometry x="-100" y="620" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-93" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-88" target="umijd8wkXjmUjJrFssDF-89" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-88" value="suggest_it_joke_templates_to_player(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
+        <mxCell id="umijd8wkXjmUjJrFssDF-88" value="suggest_it_joke_templates_to_players(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="780" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-89" target="umijd8wkXjmUjJrFssDF-94" edge="1">
