@@ -204,7 +204,7 @@
         <mxCell id="umijd8wkXjmUjJrFssDF-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-89" target="umijd8wkXjmUjJrFssDF-94" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-89" value="@bot.callback_query_handler:&lt;div&gt;call.data.startswith(&#39;it_joke_template&#39;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
+        <mxCell id="umijd8wkXjmUjJrFssDF-89" value="@bot.callback_query_handler:&lt;div&gt;call.data.startswith(&#39;it_template&#39;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="780" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-107" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-94" target="umijd8wkXjmUjJrFssDF-106" edge="1">
@@ -213,16 +213,10 @@
         <mxCell id="umijd8wkXjmUjJrFssDF-94" value="ask_player_to_finish_it_joke(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="850" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-96" target="umijd8wkXjmUjJrFssDF-97" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-96" value="suggest_an_joke_templates_to_player(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1000" width="240" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-105" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-97" target="umijd8wkXjmUjJrFssDF-98" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-97" value="@bot.callback_query_handler:&lt;div&gt;call.data.startswith(&#39;an_joke_template&#39;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
+        <mxCell id="umijd8wkXjmUjJrFssDF-97" value="@bot.callback_query_handler:&lt;div&gt;call.data.startswith(&#39;an_template&#39;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="1050" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-98" target="umijd8wkXjmUjJrFssDF-109" edge="1">
@@ -231,7 +225,7 @@
         <mxCell id="umijd8wkXjmUjJrFssDF-98" value="ask_player_to_finish_an_joke(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="1120" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-106" target="umijd8wkXjmUjJrFssDF-96" edge="1">
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="umijd8wkXjmUjJrFssDF-106" target="MzLVv4TrLHPKtUvTKifY-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-106" value="process_it_joke(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
@@ -249,7 +243,7 @@
         <mxCell id="umijd8wkXjmUjJrFssDF-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="umijd8wkXjmUjJrFssDF-113" target="umijd8wkXjmUjJrFssDF-119" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-113" value="admin:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;waiting_players_jokes(...)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;player[&#39;an_joke&#39;] &amp;lt; num_players ?&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="umijd8wkXjmUjJrFssDF-113" value="admin:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;waiting_for_players_jokes(...)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;player[&#39;an_joke&#39;] &amp;lt; num_players ?&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry y="1220" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-114" target="OrnsrFl1eFmkXh2mt2Ma-14" edge="1">
@@ -273,16 +267,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-130" value="ask_players_for_jokes_voting(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1390" width="240" height="20" as="geometry" />
+          <mxGeometry y="1500" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-1" target="OrnsrFl1eFmkXh2mt2Ma-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-1" value="@bot.callback_query_handler:&lt;div&gt;call.data.startswith(&#39;vote_&#39;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1440" width="240" height="40" as="geometry" />
+          <mxGeometry y="1550" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-3" value="process_player_vote(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1514" width="240" height="20" as="geometry" />
+          <mxGeometry y="1624" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-10" target="OrnsrFl1eFmkXh2mt2Ma-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -291,22 +285,22 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-10" value="admin:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;waiting_players_votes(...)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;player[&#39;votes&#39;] &amp;lt; num_players ?&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry y="1680" width="240" height="40" as="geometry" />
+          <mxGeometry y="1790" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-11" target="OrnsrFl1eFmkXh2mt2Ma-27" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-11" value="no" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="100" y="1750" width="40" height="20" as="geometry" />
+          <mxGeometry x="100" y="1860" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-12" value="yes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry x="-100" y="1690" width="40" height="20" as="geometry" />
+          <mxGeometry x="-100" y="1800" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.372;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-12" target="OrnsrFl1eFmkXh2mt2Ma-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-80" y="1660" />
-              <mxPoint x="89" y="1660" />
+              <mxPoint x="-80" y="1770" />
+              <mxPoint x="89" y="1770" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -314,11 +308,11 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-14" value="admin: create_pairs_of_jokes_for_voting(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1340" width="240" height="20" as="geometry" />
+          <mxGeometry y="1450" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="OrnsrFl1eFmkXh2mt2Ma-21" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="120" y="1534" as="sourcePoint" />
+            <mxPoint x="120" y="1644" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-21" target="OrnsrFl1eFmkXh2mt2Ma-22" edge="1">
@@ -328,32 +322,44 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-21" value="Have all pairs been voted on ?" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry y="1564" width="240" height="40" as="geometry" />
+          <mxGeometry y="1674" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-22" target="OrnsrFl1eFmkXh2mt2Ma-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-22" value="yes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="100" y="1634" width="40" height="20" as="geometry" />
+          <mxGeometry x="100" y="1744" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-23" target="umijd8wkXjmUjJrFssDF-130" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-80" y="1400" />
+              <mxPoint x="-80" y="1510" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-23" value="no" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry x="-100" y="1574" width="40" height="20" as="geometry" />
+          <mxGeometry x="-100" y="1684" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-27" target="OrnsrFl1eFmkXh2mt2Ma-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-27" value="admin: process_voting_results(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1790" width="240" height="20" as="geometry" />
+          <mxGeometry y="1900" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-29" value="admin: game.end(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1840" width="240" height="20" as="geometry" />
+          <mxGeometry y="1950" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MzLVv4TrLHPKtUvTKifY-1" target="MzLVv4TrLHPKtUvTKifY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-1" value="admin: collect_ai_jokes&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(...)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry y="950" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MzLVv4TrLHPKtUvTKifY-2" target="umijd8wkXjmUjJrFssDF-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-2" value="offer_an_joke_templates_to_a_player(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry y="1000" width="240" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
