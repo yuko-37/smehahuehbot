@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.6" pages="2">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
-    <mxGraphModel dx="2362" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1970" dy="681" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -28,17 +28,17 @@
         <mxCell id="LKkOueV8KloPCh96oKQd-48" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;verticalAlign=top;" parent="LKkOueV8KloPCh96oKQd-43" vertex="1">
           <mxGeometry y="40" width="360" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="LKkOueV8KloPCh96oKQd-49" value="&lt;div&gt;game_is_active&lt;/div&gt;&lt;div style=&quot;&quot;&gt;game_code&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;admin&lt;/span&gt;&lt;/div&gt;&lt;div&gt;admin_chat_id&lt;/div&gt;&lt;div&gt;num_players&lt;/div&gt;&lt;div&gt;players&lt;/div&gt;&lt;div&gt;ai_is_active&lt;/div&gt;&lt;div&gt;ai_players&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;items&lt;/div&gt;&lt;div&gt;animals&lt;/div&gt;&lt;div&gt;jokes&lt;/div&gt;&lt;div&gt;votes&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" parent="LKkOueV8KloPCh96oKQd-48" vertex="1">
+        <mxCell id="LKkOueV8KloPCh96oKQd-49" value="&lt;div&gt;active&lt;/div&gt;&lt;div style=&quot;&quot;&gt;code&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;admin&lt;/span&gt;&lt;/div&gt;&lt;div&gt;admin_chat_id&lt;/div&gt;&lt;div&gt;num_players&lt;/div&gt;&lt;div&gt;players&lt;/div&gt;&lt;div&gt;ai_is_active&lt;/div&gt;&lt;div&gt;ai_players&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;items&lt;/div&gt;&lt;div&gt;animals&lt;/div&gt;&lt;div&gt;it_joke_templates&lt;/div&gt;&lt;div&gt;an_joke_templates&lt;/div&gt;&lt;div&gt;jokes&lt;/div&gt;&lt;div&gt;joke_pairs&lt;/div&gt;&lt;div&gt;score&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" parent="LKkOueV8KloPCh96oKQd-48" vertex="1">
           <mxGeometry width="110" height="280" as="geometry">
             <mxRectangle width="110" height="280" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LKkOueV8KloPCh96oKQd-69" value="False&lt;div&gt;None&lt;/div&gt;&lt;div&gt;None&lt;/div&gt;&lt;div&gt;None&lt;/div&gt;&lt;div&gt;None&lt;/div&gt;&lt;div&gt;dict()&lt;/div&gt;&lt;div&gt;list()&lt;/div&gt;&lt;div&gt;dict()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;set()&lt;/div&gt;&lt;div&gt;list()&lt;/div&gt;&lt;div&gt;set()&lt;/div&gt;&lt;div&gt;list()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;True&lt;/span&gt;&lt;/div&gt;&lt;div&gt;dict()&lt;/div&gt;&lt;div&gt;set()&lt;/div&gt;&lt;div&gt;set()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" parent="LKkOueV8KloPCh96oKQd-48" vertex="1">
+        <mxCell id="LKkOueV8KloPCh96oKQd-69" value="False&lt;div&gt;None&lt;/div&gt;&lt;div&gt;None&lt;/div&gt;&lt;div&gt;None&lt;/div&gt;&lt;div&gt;None&lt;/div&gt;&lt;div&gt;dict()&lt;/div&gt;&lt;div&gt;True&lt;/div&gt;&lt;div&gt;dict()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;set()&lt;/div&gt;&lt;div&gt;set()&lt;/div&gt;&lt;div&gt;list()&lt;/div&gt;&lt;div&gt;list()&lt;/div&gt;&lt;div&gt;list()&lt;/div&gt;&lt;div&gt;list()&lt;/div&gt;&lt;div&gt;dict()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" parent="LKkOueV8KloPCh96oKQd-48" vertex="1">
           <mxGeometry x="110" width="50" height="280" as="geometry">
             <mxRectangle width="50" height="280" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LKkOueV8KloPCh96oKQd-67" value="True&lt;div&gt;/1234&lt;/div&gt;&lt;div&gt;some_player&lt;/div&gt;&lt;div&gt;some_id&lt;/div&gt;&lt;div&gt;? &amp;gt;= MIN_PLAYERS&lt;/div&gt;&lt;div&gt;all players who have joined&lt;/div&gt;&lt;div&gt;empty list()&lt;/div&gt;&lt;div&gt;empty dict()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;empty set()&lt;/div&gt;&lt;div&gt;loaded from file templates&lt;/div&gt;&lt;div&gt;empty set()&lt;/div&gt;&lt;div&gt;loaded from file templates&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;True&lt;/div&gt;&lt;div&gt;gpt, Claude, DeepSeek, Gemini&lt;/div&gt;&lt;div&gt;loaded from file items&lt;/div&gt;&lt;div&gt;loaded from file animals&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" parent="LKkOueV8KloPCh96oKQd-48" vertex="1">
+        <mxCell id="LKkOueV8KloPCh96oKQd-67" value="True&lt;div&gt;/1234&lt;/div&gt;&lt;div&gt;some_player&lt;/div&gt;&lt;div&gt;some_id&lt;/div&gt;&lt;div&gt;? &amp;gt;= MIN_PLAYERS&lt;/div&gt;&lt;div&gt;all players who have joined&lt;/div&gt;&lt;div&gt;True&lt;/div&gt;&lt;div&gt;gpt, Claude, DeepSeek, Gemini&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;empty set()&lt;/div&gt;&lt;div&gt;empty set()&lt;/div&gt;&lt;div&gt;loaded from file templates&lt;/div&gt;&lt;div&gt;loaded from file templates&lt;/div&gt;&lt;div&gt;empty list()&lt;/div&gt;&lt;div&gt;empty list()&lt;/div&gt;&lt;div&gt;empty dict()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" parent="LKkOueV8KloPCh96oKQd-48" vertex="1">
           <mxGeometry x="160" width="200" height="280" as="geometry">
             <mxRectangle width="200" height="280" as="alternateBounds" />
           </mxGeometry>
@@ -225,7 +225,7 @@
         <mxCell id="umijd8wkXjmUjJrFssDF-98" value="ask_player_to_finish_an_joke(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="1120" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="MzLVv4TrLHPKtUvTKifY-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="umijd8wkXjmUjJrFssDF-106" target="MzLVv4TrLHPKtUvTKifY-1">
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-106" target="MzLVv4TrLHPKtUvTKifY-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="umijd8wkXjmUjJrFssDF-106" value="process_it_joke(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
@@ -263,20 +263,20 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OrnsrFl1eFmkXh2mt2Ma-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="umijd8wkXjmUjJrFssDF-130" target="OrnsrFl1eFmkXh2mt2Ma-1" edge="1">
+        <mxCell id="48GF5Tu9onIwdEJFWa8v-3" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="umijd8wkXjmUjJrFssDF-130" target="48GF5Tu9onIwdEJFWa8v-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="umijd8wkXjmUjJrFssDF-130" value="ask_players_for_jokes_voting(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1500" width="240" height="20" as="geometry" />
+        <mxCell id="umijd8wkXjmUjJrFssDF-130" value="admin: ask_players_for_jokes_voting(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
+          <mxGeometry y="1390" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-1" target="OrnsrFl1eFmkXh2mt2Ma-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-1" value="@bot.callback_query_handler:&lt;div&gt;call.data.startswith(&#39;vote_&#39;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1550" width="240" height="40" as="geometry" />
+          <mxGeometry y="1490" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-3" value="process_player_vote(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
-          <mxGeometry y="1624" width="240" height="20" as="geometry" />
+          <mxGeometry y="1560" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-10" target="OrnsrFl1eFmkXh2mt2Ma-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -330,10 +330,10 @@
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-22" value="yes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="100" y="1744" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="OrnsrFl1eFmkXh2mt2Ma-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-23" target="umijd8wkXjmUjJrFssDF-130" edge="1">
+        <mxCell id="OrnsrFl1eFmkXh2mt2Ma-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OrnsrFl1eFmkXh2mt2Ma-23" target="48GF5Tu9onIwdEJFWa8v-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-80" y="1510" />
+              <mxPoint x="-80" y="1450" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -349,17 +349,23 @@
         <mxCell id="OrnsrFl1eFmkXh2mt2Ma-29" value="admin: game.end(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="1950" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="MzLVv4TrLHPKtUvTKifY-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MzLVv4TrLHPKtUvTKifY-1" target="MzLVv4TrLHPKtUvTKifY-2">
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MzLVv4TrLHPKtUvTKifY-1" target="MzLVv4TrLHPKtUvTKifY-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MzLVv4TrLHPKtUvTKifY-1" value="admin: collect_ai_jokes&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(...)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" vertex="1" parent="1">
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-1" value="admin: collect_ai_jokes&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(...)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="950" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="MzLVv4TrLHPKtUvTKifY-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MzLVv4TrLHPKtUvTKifY-2" target="umijd8wkXjmUjJrFssDF-97">
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MzLVv4TrLHPKtUvTKifY-2" target="umijd8wkXjmUjJrFssDF-97" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MzLVv4TrLHPKtUvTKifY-2" value="offer_an_joke_templates_to_a_player(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" vertex="1" parent="1">
+        <mxCell id="MzLVv4TrLHPKtUvTKifY-2" value="offer_an_joke_templates_to_a_player(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" parent="1" vertex="1">
           <mxGeometry y="1000" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="48GF5Tu9onIwdEJFWa8v-4" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="48GF5Tu9onIwdEJFWa8v-1" target="OrnsrFl1eFmkXh2mt2Ma-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="48GF5Tu9onIwdEJFWa8v-1" value="admin: ask_a_player_for_jokes_voting(...)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry y="1440" width="240" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
