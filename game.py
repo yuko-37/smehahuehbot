@@ -1,70 +1,103 @@
-from random import randint
-from pathlib import Path
-
 import settings as s
 import utils as u
 
-
-def start(message):
-    admin = message.from_user.username
-    admin_chat_id = message.chat.id
-
-    s.game_is_active = True
-    s.game_code = f'/{randint(1000, 10000)}'
-    s.admin = admin
-    s.admin_chat_id = admin_chat_id
-    s.num_users = None
-    s.subjects = set()
-    s.users = dict()
-
-    path = Path(s.SJ_PATTERNS_PATH)
-    content = path.read_text()
-    s.sj_patterns = content.splitlines()
-    print(f'\n---------[START] игра {s.game_code} началась\n')
+from random import randint
+from registration import Registration
+from player_input_handler import PlayerInputHandler
+from joke_handler import JokeHandler
+from voting_handler import VotingHandler
 
 
-def finish(bot, message=None, success=False):
-    code = s.game_code
-    formatted_code = u.formatted_code()
-    items = s.users
-    reset()
+class Game:
+    def __init__(self):
+        self.registration = Registration(self)
+        self.player_input_handler = PlayerInputHandler(self)
+        self.joke_handler = JokeHandler(self)
+        self.voting_handler = VotingHandler(self)
 
-    if success:
-        for name, data in items.items():
-            text = f'Конец игры. {name}, спасибо за участие!'
-            bot.send_message(data['chat_id'], text)
+        self.active = False
+        self.code = None
+        self.admin = None
+        self.admin_chat_id = None
+        self.num_players = None
+        self.players = dict()
+        self.ai_is_active = True
+        self.ai_players = dict()
+        self.items = set()
+        self.animals = set()
+        self.it_joke_templates = list()
+        self.an_joke_templates = list()
+        self.jokes = list()
+        self.joke_pairs = list()
+        self.score = dict()
 
-    else:
-        text = ''
-        if message is not None:
-            username = message.from_user.username
-            print(f'отправлен запрос на окончание игры {code} [{username}]')
-            text = f'игра {formatted_code} прервана по запросу *{username}*'
+    def start(self, message):
+        admin = message.from_user.username
+        admin_chat_id = message.chat.id
+
+        self.active = True
+        self.code = f'/{randint(1000, 10000)}'
+        self.admin = admin
+        self.admin_chat_id = admin_chat_id
+
+        self.it_joke_templates = u.load_from_file(s.IT_JOKE_TEMPLATES_PATH)
+        self.an_joke_templates = u.load_from_file(s.AN_JOKE_TEMPLATES_PATH)
+
+        print(f'\n---------[START] game {self.code} started\n')
+
+    def is_active(self):
+        res = self.active
+        res = res and self.code is not None
+        res = res and self.admin is not None
+        res = res and self.admin_chat_id is not None
+        return res
+
+    def code_formatted(self):
+        return f'*{self.code[1:]}*' if self.code is not None else None
+
+    def notify_all_except(self, text, me, bot):
+        for player, player_data in self.players.items():
+            if self.is_active() and player != me:
+                bot.send_message(player_data['chat_id'], text, parse_mode='Markdown')
+            else:
+                return
+
+    def finish(self, bot, message=None, success=False):
+        if success:
+            for player, data in self.players.items():
+                text = f'Конец игры. {player}, спасибо за участие!'
+                bot.send_message(data['chat_id'], text)
+
         else:
-            print(f'игра {code} прервана из-за таймаута')
-            text = f'игра {formatted_code} прервана из-за таймаута'
+            code_f = self.code_formatted()
+            if message is not None:
+                player = message.from_user.username
+                print(f'request to end the game {self.code} has been sent by [{player}]')
+                text = f'игра {code_f} прервана по запросу *{player}*'
+            else:
+                print(f'game {self.code} was interrupted due to timeout')
+                text = f'игра {code_f} прервана из-за таймаута'
 
-        for name, data in items.items():
-            bot.send_message(data['chat_id'], text, parse_mode='Markdown')
+            for player, data in self.players.items():
+                bot.send_message(data['chat_id'], text, parse_mode='Markdown')
 
-    print(f'\n---------[END] игра {code} завершена\n')
+        print(f'\n---------[END] game {self.code} is over\n')
+        self.reset()
 
+    def reset(self):
+        self.active = False
+        self.code = None
+        self.admin = None
+        self.admin_chat_id = None
+        self.num_players = None
+        self.players = dict()
+        self.ai_is_active = True
+        self.ai_players = dict()
+        self.items = set()
+        self.animals = set()
+        self.it_joke_templates = list()
+        self.an_joke_templates = list()
+        self.jokes = list()
+        self.joke_pairs = list()
+        self.score = dict()
 
-def is_active(): 
-    res = s.game_is_active
-    res = res and s.game_code is not None
-    res = res and s.admin is not None
-    res = res and s.admin_chat_id is not None
-    return res
-
-
-def reset():
-    s.game_is_active = False
-    s.game_code = None
-    s.admin = None
-    s.admin_chat_id = None
-    s.num_users = None
-    s.subjects = set()
-    s.users = dict()
-    s.ai_users = dict()
-    s.sj_patterns = list()
