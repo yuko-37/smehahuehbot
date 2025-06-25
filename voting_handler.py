@@ -138,6 +138,6 @@ class VotingHandler:
             for player_data in game.players.values():
                 image = BytesIO(image_data)
                 image.name = 'generate.png'
-                bot.send_photo(player_data['chat_id'], image)
+                bot.send_photo(chat_id=player_data['chat_id'], photo=image, caption=None)
 
         game.finish(bot, success=True)
