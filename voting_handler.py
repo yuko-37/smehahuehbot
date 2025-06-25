@@ -1,12 +1,13 @@
 import random
-import time
 import settings as s
 import utils as u
 import async_ai_requests as aair
+import ai_requests as ai
 import asyncio
 
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from utils import get_vote_str
+from io import BytesIO
 
 
 class VotingHandler:
@@ -108,25 +109,8 @@ class VotingHandler:
             bot.send_message(call.message.chat.id, 'Ждём пока все проголосуют...')
 
             if player == game.admin:
-                self.waiting_players_votes(bot)
+                game.waiting_for_players(bot, 'finish_voting', 'votes')
                 self.process_voting_results(bot)
-
-    def waiting_players_votes(self, bot):
-        game = self.game
-        finished = {}
-        iterations = 0
-        while game.is_active() and len(finished) < game.num_players:
-            iterations += 1
-            if iterations > s.MAX_WAIT_ITER:
-                print('waiting players votes time out...')
-                game.finish(bot)
-                return
-            time.sleep(3)
-            finished = {p for p in game.players if 'finish_voting' in game.players[p]}
-            players_waiting = str(game.players.keys() - finished)
-            log = (f"votes #{iterations}: [{len(finished)}\\{game.num_players}]"
-                   f"{'' if (len(finished) == game.num_players) else f' ждём ' + players_waiting + '...'}")
-            print(log)
 
     def process_voting_results(self, bot):
         game = self.game
@@ -146,5 +130,14 @@ class VotingHandler:
         for player_data in game.players.values():
             bot.send_message(player_data['chat_id'], text)
 
-        game.finish(bot, success=True)
+        if s.GENERATE_MOST_LIKED_JOKE_IMAGE:
+            most_liked_joke = sorted_jokes[0][1]
+            print(f"generating image for joke: {most_liked_joke}")
+            image_data = ai.generate_image_as_bytes(most_liked_joke)
 
+            for player_data in game.players.values():
+                image = BytesIO(image_data)
+                image.name = 'generate.png'
+                bot.send_photo(player_data['chat_id'], image)
+
+        game.finish(bot, success=True)

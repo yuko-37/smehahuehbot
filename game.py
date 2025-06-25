@@ -1,5 +1,6 @@
 import settings as s
 import utils as u
+import time
 
 from random import randint
 from registration import Registration
@@ -61,6 +62,22 @@ class Game:
                 bot.send_message(player_data['chat_id'], text, parse_mode='Markdown')
             else:
                 return
+
+    def waiting_for_players(self, bot, data: str, log_name: str):
+        finished = {}
+        iterations = 0
+        while self.is_active() and len(finished) < self.num_players:
+            iterations += 1
+            if iterations > s.MAX_WAIT_ITER:
+                print(f"waiting for players '{data}' time out...")
+                self.finish(bot)
+                return
+            time.sleep(3)
+            finished = {p for p in self.players if data in self.players[p]}
+            players_waiting = str(self.players.keys() - finished)
+            log = (f"{log_name} #{iterations}: [{len(finished)}\\{self.num_players}]"
+                   f"{'' if (len(finished) == self.num_players) else f' ждём ' + players_waiting + '...'}")
+            print(log)
 
     def finish(self, bot, message=None, success=False):
         if success:

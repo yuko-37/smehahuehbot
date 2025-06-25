@@ -1,4 +1,5 @@
 import os
+import settings as s
 
 from pathlib import Path
 from random import sample, choice
@@ -35,14 +36,19 @@ def extract_random_two_from(item_list):
     return sublist
 
 
-def extract_word_set_from_file(file_path):
+def extract_word_set_from_file(file_path, limit=s.LIMIT_ITEMS):
     path = Path(file_path)
     content = path.read_text()
-    return extract_word_set(content)
+    return extract_word_set(content, limit)
 
 
-def extract_word_set(text: str):
-    word_set = {sub.strip() for sub in text.split(',')}
+def extract_word_set(text: str, limit=None):
+    if limit:
+        items = text.split(',')
+        word_set = set(sample(items, limit))
+    else:
+        word_set = {sub.strip() for sub in text.split(',')}
+
     word_set.discard('')
     return word_set
 

@@ -2,7 +2,6 @@ import utils as u
 import settings as s
 import async_ai_requests as aair
 import asyncio
-import time
 
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -84,7 +83,7 @@ class JokeHandler:
         player_data = game.players[player]
         index = int(call.data.replace('an_template_', ''))
         prepared_an_joke_template = u.prepare_joke_template(player_data['an_joke_templates'][index],
-                                                            game.items,
+                                                            game.animals,
                                                             player_data['items'])
         player_data['prepared_an_joke_template'] = prepared_an_joke_template
         text = f'Добейте шутку: \n\n{prepared_an_joke_template}'
@@ -102,23 +101,7 @@ class JokeHandler:
         bot.send_message(message.chat.id, 'Ждём других игроков...')
 
         if player == game.admin:
-            self.waiting_for_players_jokes(bot)
+            game.waiting_for_players(bot, 'an_joke', 'jokes')
             game.voting_handler.create_pairs_of_jokes_for_voting()
             game.voting_handler.ask_players_for_jokes_voting(bot)
 
-    def waiting_for_players_jokes(self, bot):
-        game = self.game
-        finished = {}
-        iterations = 0
-        while game.is_active() and len(finished) < game.num_players:
-            iterations += 1
-            if iterations > s.MAX_WAIT_ITER:
-                print('waiting for players jokes time out...')
-                game.finish(bot)
-                return
-            time.sleep(3)
-            finished = {p for p in game.players if 'an_joke' in game.players[p]}
-            players_waiting = str(game.players.keys() - finished)
-            log = (f"jokes #{iterations}: [{len(finished)}\\{game.num_players}]"
-                   f"{'' if (len(finished) == game.num_players) else f' ждём ' + players_waiting + '...'}")
-            print(log)

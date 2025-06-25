@@ -1,6 +1,5 @@
 import settings as s
 import utils as u
-import time
 
 
 class PlayerInputHandler:
@@ -51,22 +50,6 @@ class PlayerInputHandler:
         bot.send_message(message.chat.id, 'Ждём других игроков...')
 
         if player == game.admin:
-            self.waiting_for_players_data(bot)
+            game.waiting_for_players(bot, 'animals', 'data')
             game.joke_handler.offer_it_joke_templates_to_players(bot)
 
-    def waiting_for_players_data(self, bot):
-        game = self.game
-        finished = {}
-        iterations = 0
-        while game.is_active() and len(finished) < game.num_players:
-            iterations += 1
-            if iterations > s.MAX_WAIT_ITER:
-                print('waiting for players data time out...')
-                game.finish(bot)
-                return
-            time.sleep(3)
-            finished = {p for p in game.players if 'animals' in game.players[p]}
-            players_waiting = str(game.players.keys() - finished)
-            log = (f"data #{iterations}: [{len(finished)}\\{game.num_players}]"
-                   f"{'' if (len(finished) == game.num_players) else f' ждём ' + players_waiting + '...'}")
-            print(log)

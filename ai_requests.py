@@ -3,6 +3,7 @@ import anthropic
 import os
 import settings as s
 import utils as u
+import base64
 
 from google import genai
 from google.genai import types
@@ -12,6 +13,20 @@ SYSTEM_MSG = ('Ты участвуешь в игре по созданию шу�
               'В каждом шаблоне нужно заменить многоточие ... на текст, '
               'чтобы получилась шутка = шаблон - ... + текст. '
               'В итоге вывести только список шуток разделённых новой строкой. Без дополнительных слов.')
+
+
+def generate_image_as_bytes(joke):
+    response = openai.images.generate(
+        model="dall-e-3",
+        prompt=f"Сгенерируй забавную картинку в стиле мема под шутку: {joke}",
+        size="1024x1024",
+        n=1,
+        response_format="b64_json"
+    )
+
+    image_base64 = response.data[0].b64_json
+    image_data = base64.b64decode(image_base64)
+    return image_data
 
 
 def ask_ai_for_jokes(ai_player, *joke_templates):
