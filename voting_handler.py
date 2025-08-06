@@ -125,7 +125,7 @@ class VotingHandler:
 
         for joke_data in sorted_jokes[:5]:
             if joke_data[3] > 0:
-                text += f'{joke_data[3]} {get_vote_str(joke_data[3])}:\n{joke_data[1]}\n\n'
+                text += f'{joke_data[3]} {get_vote_str(joke_data[3])} ({joke_data[2]}):\n{joke_data[1]}\n\n'
 
         for player_data in game.players.values():
             bot.send_message(player_data['chat_id'], text)
