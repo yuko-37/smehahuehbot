@@ -3,10 +3,11 @@ channels:
  - defaults
 dependencies:
   - python=3.11
+  - python-dotenv
+  - pytest
   - pip
   - pip:
     - pyTelegramBotAPI
-    - python-dotenv
     - openai
     - anthropic
     - google-genai
