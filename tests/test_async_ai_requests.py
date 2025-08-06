@@ -2,9 +2,10 @@ import utils as u
 import settings as s
 import async_ai_requests as aair
 import asyncio
+import logging
 
-u.load_from_env()
-print('...')
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def test_request_ai_jokes_async():
@@ -15,6 +16,8 @@ def test_request_ai_jokes_async():
     ai_joke_templates[s.GEMINI] = templates
     ai_joke_templates[s.DEEP_SEEK] = templates
     responses = asyncio.run(aair.request_ai_jokes_async(ai_joke_templates))
+
+    assert len(responses) == 4
 
     for r in responses:
         print(f"{r[0]}:\n{r[1]}")
@@ -39,8 +42,8 @@ def test_request_ai_votes_async():
     joke_pairs[s.DEEP_SEEK] = prompt
     responses = asyncio.run(aair.request_ai_votes_async(joke_pairs))
 
+    assert len(responses) == 4
+
     for r in responses:
         print(f"{r[0]}:\n{r[1]}")
 
-
-test_request_ai_votes_async()

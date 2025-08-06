@@ -1,7 +1,10 @@
 import os
 import utils as u
-
+import logging
 from tempfile import NamedTemporaryFile
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def test_extract_word_set_from_file():
@@ -16,5 +19,3 @@ def test_extract_word_set_from_file():
     finally:
         os.remove(tmp_path)
 
-
-test_extract_word_set_from_file()
